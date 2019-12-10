@@ -2260,7 +2260,7 @@
       </instance>
       <configuration/>
     </component>
-    <component qname="BlinkAppC.Timer2" loc="44(BlinkAppC.Timer2):/home/user/tinyos-release/tos/system/TimerMilliC.nc">
+    <component qname="BlinkAppC.Timer3" loc="44(BlinkAppC.Timer3):/home/user/tinyos-release/tos/system/TimerMilliC.nc">
       <documentation loc="33:/home/user/tinyos-release/tos/system/TimerMilliC.nc">
         <short>&#10; The virtualized millisecond timer abstraction.</short>
         <long>&#10; The virtualized millisecond timer abstraction. Instantiating this &#10; component gives an independent millisecond granularity timer.&#10;&#10; @author Philip Levis&#10; @date   January 16 2006&#10; @see    TEP 102: Timers&#10;</long>
@@ -2270,7 +2270,7 @@
       </instance>
       <configuration/>
     </component>
-    <component qname="BlinkAppC.TimerN" loc="44(BlinkAppC.TimerN):/home/user/tinyos-release/tos/system/TimerMilliC.nc">
+    <component qname="BlinkAppC.Timer2" loc="44(BlinkAppC.Timer2):/home/user/tinyos-release/tos/system/TimerMilliC.nc">
       <documentation loc="33:/home/user/tinyos-release/tos/system/TimerMilliC.nc">
         <short>&#10; The virtualized millisecond timer abstraction.</short>
         <long>&#10; The virtualized millisecond timer abstraction. Instantiating this &#10; component gives an independent millisecond granularity timer.&#10;&#10; @author Philip Levis&#10; @date   January 16 2006&#10; @see    TEP 102: Timers&#10;</long>

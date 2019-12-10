@@ -6145,6 +6145,17 @@ static inline void BlinkC$Timer1$fired(void )
   BlinkC$Leds$led1Toggle();
 }
 
+
+
+
+
+
+
+static inline void BlinkC$Timer3$fired(void )
+{
+  sim_log_debug(151U, "BlinkC", "Timer 3 fired @ %s. I am Timer 3 and I have the shortest period!\n", sim_time_string());
+}
+
 # 54 "/home/user/tinyos-release/tos/chips/atm128/pins/sim/HplAtm128GeneralIOPinP.nc"
 static __inline bool /*HplAtm128GeneralIOC.PortA.Bit0*/HplAtm128GeneralIOPinP$0$IO$get(void )
 #line 54
@@ -6211,11 +6222,6 @@ static inline void BlinkC$Timer2$fired(void )
   BlinkC$Leds$led2Toggle();
 }
 
-static inline void BlinkC$Timer3$fired(void )
-{
-  sim_log_debug(151U, "BlinkC", "Timer 3 fired @ %s. I am Timer 3 and I have the shortest period!\n", sim_time_string());
-}
-
 # 204 "/home/user/tinyos-release/tos/lib/timer/VirtualizeTimerC.nc"
 static inline void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$default$fired(uint8_t num)
 {
@@ -6240,13 +6246,13 @@ inline static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$f
 #line 83
     case 2U:
 #line 83
-      BlinkC$Timer2$fired();
+      BlinkC$Timer3$fired();
 #line 83
       break;
 #line 83
     case 3U:
 #line 83
-      BlinkC$Timer3$fired();
+      BlinkC$Timer2$fired();
 #line 83
       break;
 #line 83
@@ -6998,7 +7004,7 @@ inline static error_t SimMainP$SoftwareInit$init(void ){
 # 64 "/home/user/tinyos-release/tos/lib/timer/Timer.nc"
 inline static void BlinkC$Timer2$startPeriodic(uint32_t dt){
 #line 64
-  /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$startPeriodic(2U, dt);
+  /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$startPeriodic(3U, dt);
 #line 64
 }
 #line 64
@@ -7016,7 +7022,7 @@ inline static void BlinkC$Timer0$startPeriodic(uint32_t dt){
 #line 64
 inline static void BlinkC$Timer3$startPeriodic(uint32_t dt){
 #line 64
-  /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$startPeriodic(3U, dt);
+  /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$startPeriodic(2U, dt);
 #line 64
 }
 #line 64
